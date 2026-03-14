@@ -117,7 +117,7 @@ generation_summary <- DATA %>%
   mutate(installment = monthly_payment(Credit_amount, Duration)) %>% # Using the monthly payment function earlier
   
   # ---- Group By---- 
-  # Goruping by Generation
+  # Grouping by Generation
   group_by(Generation) %>%
   
   # ---- Summarize ----
@@ -128,7 +128,7 @@ generation_summary <- DATA %>%
     # What is the average monthly payment for this generation?
     Avg_Monthly_Payment = mean(installment, na.rm = TRUE),
     
-    # ow many applicants are in this generation total?
+    # How many applicants are in this generation total?
     Total_Count = n()
     )
 
